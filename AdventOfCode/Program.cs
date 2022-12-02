@@ -1,36 +1,32 @@
-﻿namespace AdventOfCode;
+﻿using System.Reflection;
 using AdventOfCode.Infrastracture;
-using System.Linq;
-using System.Reflection;
 
-class Program
+namespace AdventOfCode;
+
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
-        var day = 1;
+        var day = 2;
         var programType = typeof(Program);
         var rootNamespace = programType.Namespace;
 
-        if (args.Length == 1)
-        {
-            day = int.Parse(args[0]);
-        }
+        if (args.Length == 1) day = int.Parse(args[0]);
         var inputPath = $"Day{day}/Input/input.txt";
         var solutionNamespace = $"{rootNamespace}.Day{day}";
 
-        var type = Assembly.GetExecutingAssembly()
-            .GetTypes()
-            .Where(x => x.Namespace==solutionNamespace &&
-            x.IsAssignableTo(typeof(ISolution))).
-            Single();
- 
-        var solution = (ISolution) Activator.CreateInstance(type)!;
+        var type = Assembly
+            .GetExecutingAssembly()
+            .GetTypes().Single(x => x.Namespace == solutionNamespace &&
+                                    x.IsAssignableTo(typeof(ISolution)));
+
+        var solution = (ISolution)Activator.CreateInstance(type)!;
 
         var result1 = solution.SolvePartOne(inputPath);
         var result2 = solution.SolvePartTwo(inputPath);
 
-        Console.WriteLine($"Resolutions for Day {day}");
-        Console.WriteLine($"First soluion: {result1}");
-        Console.WriteLine($"First soluion: {result2}");
+        Console.WriteLine($"Solutions for Day {day}");
+        Console.WriteLine($"First solution: {result1}");
+        Console.WriteLine($"Second solution: {result2}");
     }
 }
