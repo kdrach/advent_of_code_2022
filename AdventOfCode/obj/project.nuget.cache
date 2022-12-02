@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8ypuWbOfbDhXnXC1cGsZ6WivxVvv/oI5+pufnIbW7v8A++pL16LqQmdlCERlTf1rUSELrbMccBgjFowcge/xdw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Krystian\\source\\repos\\AdventOfCode\\AdventOfCode\\AdventOfCode.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Krystian\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.3\\microsoft.windowsdesktop.app.ref.6.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
