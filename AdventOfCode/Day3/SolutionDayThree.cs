@@ -18,7 +18,7 @@ internal class SolutionDayThree : ISolution
     public int SolvePartTwo(string filePath)
     {
         var allLines = File.ReadAllLines(filePath);
-        var chunkedLines = ChunkBy(allLines.ToList(),3);
+        var chunkedLines = ChunkBy(allLines.ToList(), 3);
         return chunkedLines.Select(cl =>
         {
             var commonCharsOfFirstTwo = CommonChars(cl[0], cl[1]);
@@ -26,14 +26,15 @@ internal class SolutionDayThree : ISolution
             return commonChars.Select(ConvertCharToPriority).Sum();
         }).Sum();
     }
+
     private char[] CommonChars(string left, string right)
     {
         return left.GroupBy(c => c).Join(
             right.GroupBy(c => c),
             k => k.Key,
             k => k.Key,
-            (fg, lg) => 
-                fg.Zip(lg, (x1, x2) => x2)).SelectMany(c=>c).Distinct().ToArray();
+            (fg, lg) =>
+                fg.Zip(lg, (x1, x2) => x2)).SelectMany(c => c).Distinct().ToArray();
     }
 
     private int ConvertCharToPriority(char c)
