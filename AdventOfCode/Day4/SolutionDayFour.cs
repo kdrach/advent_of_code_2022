@@ -4,7 +4,7 @@ namespace AdventOfCode.Day4;
 
 internal class SolutionDayFour : ISolution
 {
-    public int SolvePartOne(string filePath)
+    public object SolvePartOne(string filePath)
     {
         var allLines = File.ReadAllLines(filePath);
 
@@ -15,7 +15,7 @@ internal class SolutionDayFour : ISolution
         }).Count(x => x);
     }
 
-    public int SolvePartTwo(string filePath)
+    public object SolvePartTwo(string filePath)
     {
         var allLines = File.ReadAllLines(filePath);
 

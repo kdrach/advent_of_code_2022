@@ -54,14 +54,14 @@ internal sealed class SolutionDayTwo : ISolution
         { 'Z', WinScore }
     };
 
-    public int SolvePartOne(string filePath)
+    public object SolvePartOne(string filePath)
     {
         var allLines = File.ReadAllLines(filePath);
         var points = allLines.Select(line => ResultDictionary[line[0]][line[2]] + ChoiceDictionary[line[2]]).Sum();
         return points;
     }
 
-    public int SolvePartTwo(string filePath)
+    public object SolvePartTwo(string filePath)
     {
         var allLines = File.ReadAllLines(filePath);
         var points = allLines.Select(line => CalculatePoints(line, ChoiceToPointDictionary[line[2]])).Sum();

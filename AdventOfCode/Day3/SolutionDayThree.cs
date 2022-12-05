@@ -4,7 +4,7 @@ namespace AdventOfCode.Day3;
 
 internal class SolutionDayThree : ISolution
 {
-    public int SolvePartOne(string filePath)
+    public object SolvePartOne(string filePath)
     {
         var allLines = File.ReadAllLines(filePath);
         return allLines.Select(line =>
@@ -15,7 +15,7 @@ internal class SolutionDayThree : ISolution
         }).Sum();
     }
 
-    public int SolvePartTwo(string filePath)
+    public object SolvePartTwo(string filePath)
     {
         var allLines = File.ReadAllLines(filePath);
         var chunkedLines = ChunkBy(allLines.ToList(), 3);

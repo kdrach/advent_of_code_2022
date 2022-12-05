@@ -7,7 +7,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var day = 4;
+        var day = 5;
         var programType = typeof(Program);
         var rootNamespace = programType.Namespace;
 

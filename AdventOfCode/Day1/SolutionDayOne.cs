@@ -4,13 +4,13 @@ namespace AdventOfCode.Day1
 {
     internal sealed class SolutionDayOne : ISolution
     {
-        public int SolvePartOne(string filePath)
+        public object SolvePartOne(string filePath)
         {
             int elvesCount = 1;
             return GetSumOfCaloriesForTopElfs(filePath, elvesCount);
         }
 
-        public int SolvePartTwo(string filePath)
+        public object SolvePartTwo(string filePath)
         {
             int elvesCount = 3;
             return GetSumOfCaloriesForTopElfs(filePath, elvesCount);
