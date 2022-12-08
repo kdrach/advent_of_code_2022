@@ -29,12 +29,16 @@
     <None Update="Day7\Input\input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Day8\Input\input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Day3\Input\" />
     <Folder Include="Day4\Input\" />
     <Folder Include="Day6\Input\" />
+    <Folder Include="Day8\Input\" />
   </ItemGroup>
 
 </Project>
